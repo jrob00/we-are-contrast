@@ -1,0 +1,414 @@
+/* ---------------------------------------------
+GLOBAL.CSS
+Orange  - ff4000
+Blue    - 202733
+--------------------------------------------- */
+
+/* --- Force a Scrollbar -----------*/
+html { 
+    height: 100%;
+    margin-bottom: 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+    text-align: center; /* for IE */
+    color: #202733;
+    min-width: 800px;
+}
+
+h1 { font-size: 1.6em; margin: 0px; }
+h2 { font-size: 1.4em; margin: 0px; }
+h3 { font-size: 1.2em; margin: 0px; }
+h4 { font-size: 1.2em; margin: 0px; }
+
+img { 
+    border: 0;
+}
+
+a { 
+    outline: none;
+    text-decoration: none;
+}
+
+.hide {
+	display:none;
+}
+
+/* ---------------------------------------------
+CONTAINERS
+--------------------------------------------- */
+
+/* --- Center the site -----------*/
+
+#wrapper {
+	font-size: 1.3em;
+    position: relative;
+    width: 800px;
+    height: 680px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* --- Top Half Container -----------*/
+
+#branding {
+    position: relative;
+    width: 800px;
+    height: 250px;
+    background-image: url(../images/topbg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-indent: -9999px;
+    /*overflow: hidden;*/
+}
+
+#branding ul li { display: inline; }
+
+#logo-container {
+    position: relative;
+    float: left;
+    /*top: 0;*/
+    width: 200px;
+    height: 250px;
+}
+
+#logo-container img {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+#navigation {
+    position: absolute;
+    top: 200px;
+    left: 225px;
+    width: 425px;
+    height: 25px;
+    /*border: 1px solid blue;*/
+}
+
+#navigation h2 { display: inline; }
+#navigation ul { margin: 0; padding: 0; }
+#navigation ul li { float: left; list-style-type: none; }
+#navigation ul li a {
+    overflow: hidden;
+    display: block;
+    height: 25px;
+    background: transparent url(../images/navstates.png) no-repeat 0 0;
+    text-indent:-9000px;
+}
+
+/* BUTTONS */    
+#navigation ul li#selected-works a { width: 150px; background-position: 0 0; }
+#navigation ul li#design-packages a { width: 160px; background-position: -150px 0; }
+#navigation ul li#contact-us a { width: 115px; background-position: -310px 0; }
+
+/* OVER STATES */
+#navigation ul li#selected-works a:hover { background-position: 0 -25px; }
+#navigation ul li#design-packages a:hover { background-position: -150px -25px; }
+#navigation ul li#contact-us a:hover { background-position: -310px -25px; }    
+
+/* PRESSED STATES */
+#navigation ul li#selected-works a:active { background-position: 0 -50px; }
+#navigation ul li#design-packages a:active { background-position: -150px -50px; }
+#navigation ul li#contact-us a:active { background-position: -310px -50px; }    
+
+/* ON STATES */
+#navigation.selected-works ul li#selected-works a { background-position: 0 -75px; }
+#navigation.design-packages ul li#design-packages a { background-position: -150px -75px; }
+#navigation.contact-us ul li#contact-us a { background-position: -310px -75px; }
+
+/* --- Bottom Half Container -----------*/
+
+#container {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background-image: url(../images/bottombg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+#content {
+    position: absolute;
+    margin: 0 auto;
+    width: 425px;
+    left: 225px;
+}
+/*#content h2 { display: inline; float: left; text-indent: -9999px; }*/
+
+#siteInfo {
+    position: relative;
+    text-align: right;
+    font-size: .8em;
+    width: 800px;
+    height: 25px;
+    right: 150px;
+    background: transparent url(../images/footer-bg.png) no-repeat top right;
+    color: #ff4000;
+}
+
+
+/* CONTACT FORM */
+form#contact a { text-decoration: none; color: #ff4000; }
+form#contact p.info { font-size: .8em; }
+form#contact p.label { margin: 5px 0; }
+form#contact textarea { width: 100%; height: 120px; }
+form#contact input[type="submit"] { margin-top: 5px; }
+
+/* PORTFOLIO */
+/*p.portfolio img { padding: 4px; border: 1px solid #ddd; }*/
+p.portfolio, p.packages { margin: 25px 0; }
+p.portfolio img { padding: 0 10px 10px 0; float: left; }
+p.portfolio img.last { padding: 0 0 10px 0; }
+
+span.highlight { color: #ff4000; }
+
+/* HACKS - clean up later */
+/* Slider Custom Sizing */
+#slider { width: 423px; }
+.scroll { width: 423px; height: 300px; top: -1px; }
+.scrollContainer div.panel div.panel-content { 
+    width: 375px;
+    margin-top: -40px;
+    padding: 0 25px;
+}
+
+/* Slider Title Backgrounds */
+.scrollContainer div.panel { padding: 0; color: #202733; }
+.scrollContainer div.panel h2 { margin: 0; height: 105px; width: 423px; text-indent: -9999px; }
+
+/*p.price {
+    border: 1px solid blue; width: 100px; height: 100px;
+    position: absolute;
+    top: -25px;
+    right: 0px;
+}*/
+
+div#basic h2 { background: transparent url(../images/packages-header-basic.png) no-repeat 0 0; }
+div#advanced h2 { background: transparent url(../images/packages-header-advanced.png) no-repeat 0 0; }
+div#custom h2 { background: transparent url(../images/packages-header-custom.png) no-repeat 0 0; }
+
+/* Slider Custom Styling */
+/*#slider { border: 1px solid #ff4000; }*/
+.scroll { border: 1px solid #ff4000; }
+
+/* Slider Custom Backgrounds */
+.scrollContainer div.panel { width: 450px; }
+div#custom div.panel-content { width: 300px; }
+/*
+div#basic { background: transparent url(../images/logo.png) no-repeat right 10px; }
+div#advanced { background: transparent url(../images/logo.png) no-repeat right 10px; }
+div#custom { background: transparent url(../images/logo.png) no-repeat right 10px; }
+*/
+
+ul.navigation {
+    position: relative;
+    width: 425px;
+    margin 0;
+    padding: 0;
+    top: 1;
+    /*padding-bottom: 9px;*/
+    z-index: 100;
+}
+
+ul.navigation li {
+    list-style: none;
+    float: left;
+    margin: 0;
+}
+
+ul.navigation a {
+    padding: 0;
+    /*padding: 10px;*/
+    /*color: #000;*/
+    /*text-decoration: none;*/
+}
+
+ul.navigation li a { 
+    overflow: hidden;
+    display: block;
+    width: 100px;
+    height: 26px;
+    background: transparent url(../images/tabstates.png) no-repeat 0 0;
+    text-indent:-9999px;
+}
+
+
+/* BUTTONS */
+ul.navigation li#nav-basic a { width: 138px; background-position: 0 -26px; }
+ul.navigation li#nav-advanced a { width: 150px; background-position: -138px -26px; }
+ul.navigation li#nav-custom a { width: 137px; background-position: -288px -26px; }
+
+ul.navigation li#nav-basic a:hover { background-position: 0 0; }
+ul.navigation li#nav-advanced a:hover { background-position: -138px 0; }
+ul.navigation li#nav-custom a:hover { background-position: -288px 0; }
+
+ul.navigation li#nav-basic a.selected { background-position: 0 0; }
+ul.navigation li#nav-advanced a.selected { background-position: -138px 0; }
+ul.navigation li#nav-custom a.selected { background-position: -288px 0; }
+
+ul.navigation a:focus { outline: none; }
+    
+.scrollButtons { z-index: 99; }
+.scrollButtons.left {
+    left: -25px;
+}
+
+.scrollButtons.right {
+    right: -27px;
+}
+
+ul.feature-list { 
+/*  list-style: none;*/
+    margin-top: 5px;
+    padding-left: 15px;
+    color: #ff4000;
+}
+ul.feature-list li:first-line { color: #202733; }
+
+div.panel p { margin: 0; }
+
+/* Pretty Photo Hack */
+* html div.pictureHolder .top { padding: 0; }
+
+div.pictureHolder .top {
+    height: 10px;
+}
+
+div.pictureHolder .top .middle {
+    left: 0px; right: 0px;
+    height: 10px;
+}
+
+* html div.pictureHolder .bottom { padding: 0; }
+
+div.pictureHolder .bottom {
+height: 20px;
+}
+
+div.pictureHolder .bottom .middle {
+left: 0px; right: 0px;
+}
+			
+/*div.pictureHolder .content a.close {
+position: absolute;
+right: 10px;
+float: none;
+}*/
+/*div.pictureHolder .content .details p { padding-right: 10px; }*/
+div.prettyPhotoTitle { color: #ff4000; }
+
+div.prettyPhotoTitle div.prettyPhotoTitleLeft,
+div.prettyPhotoTitle div.prettyPhotoTitleRight { width: 8px; }
+
+    /* ---------------------------------------------
+    CLIENT OPTIONS PANEL
+    -----------------------------------------------*/
+    #topbar {
+        position:relative;
+        width:100%;
+        height:5px;
+        padding:0;
+        overflow:visible;
+        z-index:200;
+        background:#ff4000;
+    }
+    
+    /* --- Position the button -----------*/
+    #topbar div {
+        position: absolute;
+        right: 150px;
+        margin:0 auto;
+    }
+    
+    #topbar a.button {
+        float:right;
+    }
+
+    /* --- Hides all panel in their closed states -----------*/
+    
+    .panel-closed {
+        display:none;
+    }
+    
+    /* --- Styles the 100% opening panel -----------*/
+    
+    .clients {
+        background:#202733;
+        display:none;
+        z-index: 1001;
+    }
+    
+    /* --- Styles the content in the panel -----------*/
+    
+    .clients div {
+        overflow:hidden;
+        width:650px;
+        margin:0 auto;
+        text-align:left;
+        font-size:1.1em;
+        padding:5px 0;
+    }
+    
+    /* --- Styles the and open closed states state of the <a> tag controlling the clients link -----------*/
+    
+    #topbar a.panel-up { 
+        display:block;
+        background:url(../images/client-tab.gif);
+        width:82px;
+        height:14px;
+        margin-top: 5px;
+        text-indent:-5000px;
+     }
+     
+    /* --- Visual styles -----------*/
+    
+    .clients dl {
+        float:left;
+        width:304px;
+        height:90px;
+        padding:10px;
+        border-right:1px solid #000;
+        border-left:1px solid #262626;
+    }
+    
+    .clients dl.project_manager {
+        border-left:none;
+    }
+    
+    .clients dl.not {
+        border-right:none;
+    }
+    
+    .clients dl dt {
+        width:151px;
+        height:19px;
+        text-indent:-5000px;
+        margin-bottom:10px;
+    }
+    
+    .clients dl.project_manager dt {
+        background: url(../images/tit_project_manager.gif);
+    }
+        
+    .clients dl.not dt {
+        background: url(../images/tit_not.gif);
+    }
+    
+    .clients dl dd {
+        padding-right:10px;
+        line-height:1.5em;
+    }
+    
+    .clients dl dd a {
+        color:#CCC;
+    }
+    
+    .clients dl dd a:hover {
+        color:#FF4000;
+        text-decoration:none;
+    }
