@@ -1,0 +1,60 @@
+html { height: 100%; }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	background-color: #202632;
+	text-align: center;
+	color: #fff;
+}
+
+a { text-decoration: none; color: #fff; }
+
+#branding {
+	position: absolute;
+	text-indent: -9999px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border-top: 1px solid #ff4001;
+	z-index: 99;
+}
+
+#branding ul li, #branding h1, #branding h2 { display: inline; }
+
+#container {
+	position: relative;
+	top: 0px;
+	margin: 0 auto;
+	width: 900px;
+	height: 839px;
+	text-align: left;
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+#contact { 
+	position: absolute; 
+	top: 80px;
+	right: 0;
+	margin-right: 50px; 
+	font-size: 1.8em;
+	height: 50px;
+}
+
+#content {
+	text-align: center;
+}
+
+#mySlideshow {
+	position: relative;
+	font-size: 2.34em;
+	margin: 0 auto;
+	top: 168px;
+	width: 780px !important;
+	height: 480px !important;
+	text-align: left;
+}
